@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="MajiPay.MeterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MajiPay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"  Background="#FF586DF1" Orientation="Horizontal">
+            <AppBarButton Icon="Back" Label="LOG OUT" FontSize="16" Click="AppBarButton_Click"/>
+            <TextBlock Text="MAJIPAY" FontFamily="Segoe WP Semibold" FontSize="24" VerticalAlignment="Center" Margin="50,2,0,0" />
+        </StackPanel>        
+        <Grid Grid.Row="1" Margin="30,60,30,30">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Padding" Value="10,5"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontSize" Value="19"/>
+                    <Setter Property="FontFamily" Value="Segoe WP"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />                
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"  />
+                <RowDefinition Height="Auto"  />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />             
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1">Meter number:</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Name="txtmeterno"   
+                       />
+            <TextBlock Grid.Row="2">Name:</TextBlock>
+            <TextBlock x:Name="txtname" Grid.Row="2" Grid.Column="1"   
+                       />
+            <TextBlock Grid.Row="3">Last Reading:</TextBlock>
+            <TextBlock x:Name="txtlastreading" Grid.Row="3" Grid.Column="1"   
+                       />
+            <TextBlock Grid.Row="4">Compliance:</TextBlock>
+            <TextBlock x:Name="txtcompliance" Grid.Row="4" 
+                     Margin="0,0,0,10"
+                     Grid.Column="1"                      
+                     />
+            <TextBlock Grid.Row="5" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontWeight="SemiBold" Margin="0,10">New Meter Reading</TextBlock>
+            <TextBox x:Name="txtmeterreading" Grid.Row="6" 
+                     BorderBrush="Black"
+                     InputScope="Number"
+                     BorderThickness="1"
+                     Margin="0,0,0,10"
+                     Grid.ColumnSpan="2"
+                     PlaceholderText="Enter meter reading" />
+        </Grid>
+        <Button Grid.Row="2" x:Name="btnsubmit" Background="#FF586DF1" x:Uid="btnsubmit" Content="SUBMIT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnsubmit_Click" />
+    </Grid>
+</Page>

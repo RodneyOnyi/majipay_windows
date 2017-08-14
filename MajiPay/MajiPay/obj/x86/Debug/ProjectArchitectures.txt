@@ -1,0 +1,1 @@
+C:\Users\Rodney\Documents\Visual Studio 2017\Projects\MajiPay\MajiPay\MajiPay.csproj;x86

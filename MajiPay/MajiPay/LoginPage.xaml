@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="MajiPay.LoginPage"    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MajiPay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"   
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <StackPanel Margin="30,100,30,0">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontSize" Value="18"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Username" Margin="0,0,0,10"/>
+            <TextBox x:Name="username" x:Uid="txtusername"
+                BorderBrush="Black"
+                       BorderThickness="1"
+                       Margin="0,0,0,10"/>
+            <TextBlock Text="Password" Margin="0,0,0,10" />
+            <PasswordBox x:Name="password" x:Uid="Password" 
+                HorizontalAlignment="Stretch" Margin="0,0,0,30" BorderBrush="Black" BorderThickness="1" >
+            </PasswordBox>
+            <Button x:Name="btnlogin" Background="#FF586DF1" x:Uid="btnlogin" Content="LOGIN" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Page>
